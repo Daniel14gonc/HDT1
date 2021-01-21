@@ -19,11 +19,14 @@ public class Main {
         System.out.println("\n\nBienvenido a la RadioKAD");
         System.out.print("\t Desea prender la radio? [si/no] ");
 
+        //define si se enciende o no la radio.
         if(scan.next().equals("si")){
             radio.encender();
         }else{
             System.out.println("no");
         }
+
+        //se hace unicamente si el valor isON es true.
         while(radio.isON()){
 
             System.out.println(radio.toString());
@@ -40,16 +43,21 @@ public class Main {
             int posicion = 0;
             switch(opcion){
               case 1:
+                  //opcion que permite cambiar la frecuencia de AM a FM a AM.
                 radio.frecuencia();
                 break;
       
               case 2:
+                  //Aumenta el valor para cambiar de emisoras.
                   radio.incrementar();
                 break;
       
               case 3:
+                  //recibe el numero de boton al que desea a signar una emisora.
                 System.out.print("Ingrese el boton donde desea guardarlo -> ");
                 posicion = scan.nextInt()-1;
+
+                //verifica que los valores se encuentren dentro del rango permitido.
                 if(posicion > 0 && posicion < 13){
                     radio.asignar(posicion);
                 }
@@ -60,8 +68,10 @@ public class Main {
                 break;
       
               case 4:
+                  //recibe el numero del boton para cambiar la emisora al seleccionado.
                 System.out.print("Opcion -> ");
                 posicion = scan.nextInt()-1;
+                //verifica que los valores se encuentren dentro del rango permitido.
                 if(posicion > 0 && posicion < 13){
                     radio.emisoras(posicion);
                 }
@@ -72,6 +82,7 @@ public class Main {
                 break;
                 
               case 5:
+                  //asigna a isON el valor de false, terminando el programa.
                 radio.apagar();
                 break;
               
