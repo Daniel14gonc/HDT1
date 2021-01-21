@@ -73,7 +73,7 @@ public class RadioKAD implements Radio{
             }
         }
     }
-
+    //Este metodo permite asignar una emisora a cualquier posición que el usuario desee
     public boolean asignar(int a){
 
         if(frecuenciaActual==0){
@@ -90,6 +90,7 @@ public class RadioKAD implements Radio{
 
     }
 
+    //Este metodo permite asignar una posición a cualquier emisora que el usuario desee
     public boolean emisoras(int a){
 
         if(frecuenciaActual==0){
