@@ -83,10 +83,17 @@ public class RadioKAD implements Radio{
 
                     emisorasAM[a] = emisoraActualAM;
 
+                    if(emisoraActualAM == emisorasAM[a]){
+                        return true;
+                    }
+
                 } else if (frecuenciaActual == 1) {
 
                     emisorasFM[a] = emisoraActualFM;
 
+                    if(emisoraActualFM == emisorasFM[a]){
+                        return true;
+                    }
                 }
             }
         }
@@ -95,7 +102,7 @@ public class RadioKAD implements Radio{
             throw new InputMismatchException(ex);
         }
 
-        return true;
+        return false;
 
     }
 
