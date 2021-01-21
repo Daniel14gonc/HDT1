@@ -1,2 +1,3 @@
-public class RadioKAD {
+public class RadioKAD implements Radio{
+
 }
