@@ -41,7 +41,7 @@ public class RadioKAD implements Radio{
     }
 
     //Metodo que permite determinar si la radio esta encendida o no.
-    public boolean isON(){
+    public boolean isOn(){
         return ON;
     }
 

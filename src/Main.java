@@ -27,7 +27,7 @@ public class Main {
         }
 
         //se hace unicamente si el valor isON es true.
-        while(radio.isON()){
+        while(radio.isOn()){
 
             System.out.println(radio.toString());
 
