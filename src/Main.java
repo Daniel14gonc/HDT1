@@ -1,3 +1,13 @@
+/*
+    Creadores: Kenneth Galvez, Juan Diego Avila, Daniel Gonzalez
+    Modificacion: 20/01/2021
+
+    Descripcion:
+        Clase que permite crear la interaccion con el usuario para que
+        pueda tener acceso a las funcionalidades de la radio.
+ */
+
+
 import java.util.Scanner;
 
 public class Main {
@@ -27,7 +37,7 @@ public class Main {
             System.out.print("\nEscoja una de las opciones -> ");
             
             int opcion = scan.nextInt();
-      
+            int posicion = 0;
             switch(opcion){
               case 1:
                 radio.frecuencia();
@@ -38,15 +48,26 @@ public class Main {
                 break;
       
               case 3:
-                System.out.print("Opcion -> ");
-                int posicion = scan.nextInt()-1;
-                radio.asignar(posicion);
+                System.out.print("Ingrese el boton donde desea guardarlo -> ");
+                posicion = scan.nextInt()-1;
+                if(posicion > 0 && posicion < 13){
+                    radio.asignar(posicion);
+                }
+                else{
+                    System.out.println("Ingrese una opcion correcta.");
+                }
+
                 break;
       
               case 4:
                 System.out.print("Opcion -> ");
-                int posicion = scan.nextInt()-1;
-                radio.emisoras(posicion);
+                posicion = scan.nextInt()-1;
+                if(posicion > 0 && posicion < 13){
+                    radio.emisoras(posicion);
+                }
+                else{
+                    System.out.println("Ingrese una opcion correcta.");
+                }
                 break;
                 
               case 5:
