@@ -84,6 +84,9 @@ public class Main {
                     radio.apagar();
                     break;
 
+                default:
+                    System.out.println("Ingrese un valor en el rango de 1 a 5 !");
+
             }
 
         }
