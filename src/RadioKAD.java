@@ -107,13 +107,12 @@ public class RadioKAD implements Radio{
     }
 
     public boolean emisoras(int a) throws InputMismatchException {
+
         try{
             if(frecuenciaActual==0){
-
                 emisoraActualAM = (emisorasAM[a] == 0) ? emisoraActualAM : emisorasAM[a];
             }
             else{
-
                 emisoraActualFM = (emisorasFM[a] == 0) ? emisoraActualFM : emisorasFM[a];
             }
         }
