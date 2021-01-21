@@ -8,6 +8,7 @@
         guardar emisoras en botones, encender y apagar la radio y mostrar su estado.
  */
 
+
 public class RadioKAD implements Radio{
 
     //Atributos
