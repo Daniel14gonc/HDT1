@@ -8,6 +8,7 @@
         guardar emisoras en botones, encender y apagar la radio y mostrar su estado.
  */
 
+import java.util.InputMismatchException;
 
 public class RadioKAD implements Radio{
 
@@ -53,7 +54,7 @@ public class RadioKAD implements Radio{
         ON = false;
     }
 
-    public void incrementar(){
+    public void incrementar() throws InputMismatchException {
         //Este metodo permite aumentar la emisora en cualquier frecuencia.
         //Cuando llega al limite estipulado para cada frecuencia, la emisora regresa al inicio.
         if(frecuenciaActual == 1){
@@ -73,34 +74,47 @@ public class RadioKAD implements Radio{
             }
         }
     }
-    //Este metodo permite asignar una emisora a cualquier posición que el usuario desee
-    public boolean asignar(int a){
 
-        if(frecuenciaActual==0){
+    public boolean asignar(int a) throws InputMismatchException {
 
-            emisorasAM[a] = emisoraActualAM;
+        try {
+            if(a >= 0 && a < 12) {
+                if (frecuenciaActual == 0) {
 
-        }else if(frecuenciaActual==1){
+                    emisorasAM[a] = emisoraActualAM;
 
-            emisorasFM[a] = emisoraActualFM;
+                } else if (frecuenciaActual == 1) {
 
+                    emisorasFM[a] = emisoraActualFM;
+
+                }
+            }
+        }
+        catch (InputMismatchException e){
+            String ex = "El dato ingresado no es correcto.";
+            throw new InputMismatchException(ex);
         }
 
         return true;
 
     }
 
-    //Este metodo permite asignar una posición a cualquier emisora que el usuario desee
-    public boolean emisoras(int a){
+    public boolean emisoras(int a) throws InputMismatchException {
+        try{
+            if(frecuenciaActual==0){
 
-        if(frecuenciaActual==0){
+                emisoraActualAM = (emisorasAM[a] == 0) ? emisoraActualAM : emisorasAM[a];
+            }
+            else{
 
-            emisoraActualAM = (emisorasAM[a] == 0) ? emisoraActualAM : emisorasAM[a];
+                emisoraActualFM = (emisorasFM[a] == 0) ? emisoraActualFM : emisorasFM[a];
+            }
         }
-        else{
-
-            emisoraActualFM = (emisorasFM[a] == 0) ? emisoraActualFM : emisorasFM[a];
+        catch (InputMismatchException e){
+            String ex = "Ingreso incorrectamente el dato.";
+            throw new InputMismatchException(ex);
         }
+
         return true;
 
     }

@@ -30,65 +30,63 @@ public class Main {
         while(radio.isON()){
 
             System.out.println(radio.toString());
-      
+
             System.out.println("\n\n\n\t1. Cambiar de frecuencia");
             System.out.println("\t2. Avanzar en el dial de las emisoras.");
             System.out.println("\t3. Guardar una emisora en una de los 12 botones.");
             System.out.println("\t4. Seleccionar la emisora puesta en un boton.");
             System.out.println("\t5. Apagar el radio. \t");
-            
+
             System.out.print("\nEscoja una de las opciones -> ");
-            
+
             int opcion = scan.nextInt();
             int posicion = 0;
             switch(opcion){
-              case 1:
-                  //opcion que permite cambiar la frecuencia de AM a FM a AM.
-                radio.frecuencia();
-                break;
-      
-              case 2:
-                  //Aumenta el valor para cambiar de emisoras.
-                  radio.incrementar();
-                break;
-      
-              case 3:
-                  //recibe el numero de boton al que desea a signar una emisora.
-                System.out.print("Ingrese el boton donde desea guardarlo -> ");
-                posicion = scan.nextInt()-1;
+                case 1:
+                    //opcion que permite cambiar la frecuencia de AM a FM a AM.
+                    radio.frecuencia();
+                    break;
 
-                //verifica que los valores se encuentren dentro del rango permitido.
-                if(posicion > 0 && posicion < 13){
-                    radio.asignar(posicion);
-                }
-                else{
-                    System.out.println("Ingrese una opcion correcta.");
-                }
+                case 2:
+                    //Aumenta el valor para cambiar de emisoras.
+                    radio.incrementar();
+                    break;
 
-                break;
-      
-              case 4:
-                  //recibe el numero del boton para cambiar la emisora al seleccionado.
-                System.out.print("Opcion -> ");
-                posicion = scan.nextInt()-1;
-                //verifica que los valores se encuentren dentro del rango permitido.
-                if(posicion > 0 && posicion < 13){
-                    radio.emisoras(posicion);
-                }
-                else{
-                    System.out.println("Ingrese una opcion correcta.");
-                }
-                radio.emisoras(posicion);
-                break;
-                
-              case 5:
-                  //asigna a isON el valor de false, terminando el programa.
-                radio.apagar();
-                break;
-              
+                case 3:
+                    //recibe el numero de boton al que desea a signar una emisora.
+                    System.out.print("Ingrese el boton donde desea guardarlo -> ");
+                    posicion = scan.nextInt()-1;
+                    try{
+                        radio.asignar(posicion);
+                    }
+                    catch (Exception e){
+                        System.out.println(e.getMessage());
+                    }
+
+                    break;
+
+                case 4:
+                    //recibe el numero del boton para cambiar la emisora al seleccionado.
+                    System.out.print("Opcion -> ");
+                    posicion = scan.nextInt()-1;
+                    //verifica que los valores se encuentren dentro del rango permitido.
+                    try{
+                        radio.emisoras(posicion);
+                    }
+                    catch (Exception e){
+                        System.out.println(e.getMessage());
+                    }
+
+                    break;
+
+                case 5:
+                    //asigna a isON el valor de false, terminando el programa.
+                    radio.apagar();
+                    break;
+
             }
-            
-          }
+
+        }
 
 
 
