@@ -15,7 +15,7 @@ public class RadioKADTest {
 
     @org.junit.Test
     public void isOn() {
-        boolean tipo = false;
+        //boolean tipo = false;
         RadioKAD instance = new RadioKAD();
         boolean expResult = false;
         boolean result = instance.isOn();

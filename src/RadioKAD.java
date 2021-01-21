@@ -1,5 +1,5 @@
-/*
-    Creadores: Kenneth Galvez, Juan Diego Avila, Daniel Gonzalez
+/**
+    @author Kenneth Galvez, Juan Diego Avila, Daniel Gonzalez
     Modificacion: 20/01/2021
 
     Descripcion:
@@ -40,8 +40,9 @@ public class RadioKAD implements Radio{
         emisoraActualFM = 87.9;
     }
 
-    //Metodo que permite determinar si la radio esta encendida o no.
+
     public boolean isOn(){
+        /**Metodo que permite determinar si la radio esta encendida o no.*/
         return ON;
     }
 
@@ -55,8 +56,9 @@ public class RadioKAD implements Radio{
     }
 
     public void incrementar() throws InputMismatchException {
-        //Este metodo permite aumentar la emisora en cualquier frecuencia.
-        //Cuando llega al limite estipulado para cada frecuencia, la emisora regresa al inicio.
+        /** Este metodo permite aumentar la emisora en cualquier frecuencia.
+         Cuando llega al limite estipulado para cada frecuencia, la emisora regresa al inicio.*/
+
         if(frecuenciaActual == 1){
             if(emisoraActualFM < 107.9){
                 emisoraActualFM += 0.2;
@@ -76,7 +78,7 @@ public class RadioKAD implements Radio{
     }
 
     public boolean asignar(int a) throws InputMismatchException {
-
+        /** Clase que permite asignar una emisora a un boton. */
         try {
             if(a >= 0 && a < 12) {
                 if (frecuenciaActual == 0) {
@@ -101,13 +103,16 @@ public class RadioKAD implements Radio{
             String ex = "El dato ingresado no es correcto.";
             throw new InputMismatchException(ex);
         }
-
+        /**
+         * Retorna verdadero si se logra asignar la emisora a un boton. De lo contrario, retorna falso.
+         * @return boolean
+         */
         return false;
 
     }
 
     public boolean emisoras(int a) throws InputMismatchException {
-
+        /** Metodo que permite obtener la emisora guardada en un boton.*/
         try{
             if(frecuenciaActual==0){
                 emisoraActualAM = (emisorasAM[a] == 0) ? emisoraActualAM : emisorasAM[a];
@@ -120,13 +125,16 @@ public class RadioKAD implements Radio{
             String ex = "Ingreso incorrectamente el dato.";
             throw new InputMismatchException(ex);
         }
-
+        /**
+         * @return boolean
+         */
         return true;
 
     }
 
     //Metodo que permite modificar la frecuencia de la radio de AM a FM.
     public void frecuencia(){
+        /**Metodo que permite cambiar la frecuencia*/
         frecuenciaActual = (frecuenciaActual == 0) ? 1: 0;
     }
 
