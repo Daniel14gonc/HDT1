@@ -45,7 +45,7 @@ public class Main {
       
               case 4:
                 System.out.print("Opcion -> ");
-                int posicion = scan.nextInt()-1;
+                posicion = scan.nextInt()-1;
                 radio.emisoras(posicion);
                 break;
                 
