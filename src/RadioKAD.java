@@ -10,36 +10,40 @@
 
 public class RadioKAD implements Radio{
 
+<<<<<<< HEAD
 
     //Atributos
     private boolean ON;
+=======
+>>>>>>> 403cbbf95b26e7c94522f62707d8d9cdaa1943f4
 
-    private int emisoraActualAM;
-    private double emisoraActualFM;
+        private boolean ON;
 
-    private int frecuenciaActual;
+        private int emisoraActualAM;
+        private double emisoraActualFM;
 
-    private int[] emisorasAM;
-    private double[] emisorasFM;
+        private int frecuenciaActual;
 
-
-    public RadioKAD(){
-        //Al iniciar la radio siempre esta apagada.
-        ON = false;
-
-        //Para la frecuencia AM equivale a 0 y FM a 1.
-        frecuenciaActual = 0;
-
-        emisorasAM = new int[12];
-        emisorasFM = new double[12];
+        private int[] emisorasAM;
+        private double[] emisorasFM;
 
 
-        //La emisora inicia siempre en la mas baja.
-        emisoraActualAM = 530;
-        emisoraActualFM = 87.9;
+        public RadioKAD(){
+            //Al iniciar la radio siempre esta apagada.
+            ON = false;
 
-    }
+            //Para la frecuencia AM equivale a 0 y FM a 1.
+            frecuenciaActual = 0;
 
+            emisorasAM = new int[12];
+            emisorasFM = new double[12];
+
+
+            //La emisora inicia siempre en la mas baja.
+            emisoraActualAM = 530;
+            emisoraActualFM = 87.9;
+
+<<<<<<< HEAD
     //Metodo que permite determinar si la radio esta encendida o no.
     public boolean isON(){
         return ON;
@@ -49,14 +53,23 @@ public class RadioKAD implements Radio{
     public void encender(){
         ON = true;
     }
+=======
+        }
 
-    public void apagar(){
+        public boolean isON(){
+            return ON;
+        }
 
-        ON = false;
+        public void encender(){
 
-    }
+            ON = true;
+>>>>>>> 403cbbf95b26e7c94522f62707d8d9cdaa1943f4
 
+        }
 
+        public void apagar(){
+
+<<<<<<< HEAD
     public void incrementar(){
         //Este metodo permite aumentar la emisora en cualquier frecuencia.
         //Cuando llega al limite estipulado para cada frecuencia, la emisora regresa al inicio.
@@ -138,5 +151,9 @@ public class RadioKAD implements Radio{
     }
 
 
+=======
+            ON = false;
+>>>>>>> 403cbbf95b26e7c94522f62707d8d9cdaa1943f4
 
+        }
 }

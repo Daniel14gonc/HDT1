@@ -62,12 +62,16 @@ public class Main {
               case 4:
                 System.out.print("Opcion -> ");
                 posicion = scan.nextInt()-1;
+<<<<<<< HEAD
                 if(posicion > 0 && posicion < 13){
                     radio.emisoras(posicion);
                 }
                 else{
                     System.out.println("Ingrese una opcion correcta.");
                 }
+=======
+                radio.emisoras(posicion);
+>>>>>>> 403cbbf95b26e7c94522f62707d8d9cdaa1943f4
                 break;
                 
               case 5:
