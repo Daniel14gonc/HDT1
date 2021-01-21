@@ -14,13 +14,9 @@ public class RadioKADTest {
     public void isON() {
         boolean tipo = false;
         RadioKAD instance = new RadioKAD();
-        boolean expResult = true;
+        boolean expResult = false;
         boolean result = instance.isON();
-        assertEquals(expResult, result);
-        if (result.equals(expResult)){
-            fail("Fallo el metodo");
-        }
-
+        assertEquals("Fallo el metodo",expResult, result);
     }
 
     @org.junit.Test
