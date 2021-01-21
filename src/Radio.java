@@ -4,8 +4,8 @@ public interface Radio {
      void encender();
      void apagar();
      void incrementar();
-     void asignar();
-     void emisoras();
+     boolean asignar(int a);
+     boolean emisoras(int a);
      void frecuencia();
 
 }
