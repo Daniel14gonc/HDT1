@@ -22,10 +22,10 @@ public interface RadioGeneral {
      void incrementar();
 
      /**Metodo que permite asignar una emisor a un boton.*/
-     boolean asignar(int a);
+     boolean asignar(int num);
 
      /**Metodo que permite elegir un boton.*/
-     boolean emisoras(int a);
+     boolean emisoras(int num);
 
      /**Metodo que permite modificar la frecuencia de la radio.*/
      void frecuencia();
