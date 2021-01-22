@@ -10,7 +10,7 @@
 public interface RadioGeneral {
 
      /**Metodo que permite determinar si la radio esta encendida.*/
-     boolean isOn();
+     boolean isON();
 
      /**Metodo que permite encender la radio.*/
      void encender();

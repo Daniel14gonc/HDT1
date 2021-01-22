@@ -23,7 +23,7 @@ import java.util.Scanner;
 
                 //se hace unicamente si el valor isON es true.
                 while(opcion != 6){
-                    if(!radio.isOn()){
+                    if(!radio.isON()){
                         System.out.print("\t Desea prender la radio? [si/no] ");
 
                         //define si se enciende o no la radio.

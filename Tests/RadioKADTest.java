@@ -14,11 +14,11 @@ import java.util.Scanner;
 public class RadioKADTest {
 
     @org.junit.Test
-    public void isOn() {
+    public void isON() {
         //boolean tipo = false;
         RadioKAD instance = new RadioKAD();
         boolean expResult = false;
-        boolean result = instance.isOn();
+        boolean result = instance.isON();
         assertEquals("Fallo el metodo",expResult, result);
     }
 
