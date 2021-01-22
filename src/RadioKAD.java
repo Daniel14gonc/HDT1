@@ -10,7 +10,7 @@
 
 import java.util.InputMismatchException;
 
-public class RadioKAD implements Radio{
+public class RadioKAD implements RadioGeneral{
 
     //Atributos
     private boolean ON;

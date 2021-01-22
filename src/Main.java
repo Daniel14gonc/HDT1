@@ -14,7 +14,7 @@ import java.util.Scanner;
 
             public static void main(String[] args) {
 
-                Radio radio = new RadioKAD();
+                RadioGeneral radio = new RadioKAD();
                 Scanner scan = new Scanner(System.in);
                 System.out.println("\n\nBienvenido a la RadioKAD");
 

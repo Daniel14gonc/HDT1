@@ -25,7 +25,7 @@ public class RadioKADTest {
     @org.junit.Test
     public void asignar() {
         //Prueba de la asignacion de una emisora a un boton.
-        Radio radio = new RadioKAD();
+        RadioGeneral radio = new RadioKAD();
 
         boolean temp = radio.asignar(3);
 
@@ -36,7 +36,7 @@ public class RadioKADTest {
     public void emisoras() {
         //prueba de la eleccion de una emisora.
 
-        Radio radio = new RadioKAD();
+        RadioGeneral radio = new RadioKAD();
 
         Random random = new Random();
         int recibido = random.nextInt(12);

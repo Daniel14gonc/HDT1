@@ -7,7 +7,7 @@
         de la radio.
  */
 
-public interface Radio {
+public interface RadioGeneral {
 
      /**Metodo que permite determinar si la radio esta encendida.*/
      boolean isOn();
